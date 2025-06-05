@@ -1,7 +1,8 @@
-const express = require("express");
-const axios = require("axios");
+import express from 'express';
+import axios from 'axios';
+import dotenv from 'dotenv'
 
-require('dotenv').config()
+dotenv.config()
 
 const router = express.Router();
 const API_URL = process.env.POKEMON_URL;
@@ -40,4 +41,4 @@ router.get("/pokemon/:name", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router
