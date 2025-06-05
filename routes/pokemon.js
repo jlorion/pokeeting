@@ -17,16 +17,18 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/not-found", async (req, res) => {
+  res.render("pages/notfound");
+});
 
 router.get("/search", async (req, res) => {
   try {
     const { name } = req.query;
-    if (!name) return res.redirect("/");
-
+    if (!name) return res.redirect("/not-found");
     const response = await axios.get(`${API_URL}/${name.toLowerCase()}`);
     res.render("pages/details", { pokemon: response.data });
   } catch (error) {
-    res.status(404).send("Pokémon not found");
+    res.redirect("/not-found");
   }
 });
 
@@ -40,5 +42,6 @@ router.get("/pokemon/:name", async (req, res) => {
     res.status(500).send("Pokémon not found");
   }
 });
+
 
 export default router
