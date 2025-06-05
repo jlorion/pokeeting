@@ -40,13 +40,15 @@ A simple and modern Pokédex web app built with Node.js, Express, EJS, and Tailw
 
 ## 🗂️ Project Structure
 
+```text
 .
 ├── routes/              # Express route handlers
 ├── views/               # EJS templates (pages and partials)
-├── index.js
+├── index.js             # Entry point 
 ├── package.json
 ├── tailwind.config.js
 └── postcss.config.js
+```
 
 ## 🛠️ Technologies Used
 
@@ -55,11 +57,6 @@ A simple and modern Pokédex web app built with Node.js, Express, EJS, and Tailw
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Axios](https://axios-http.com/)
 - [PokéAPI](https://pokeapi.co/)
-
-## 📸 Screenshots
-
-![Pokédex Home](https://user-images.githubusercontent.com/your-username/pokedex-home.png)
-![Pokémon Details](https://user-images.githubusercontent.com/your-username/pokedex-details.png)
 
 ## 🤝 Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
